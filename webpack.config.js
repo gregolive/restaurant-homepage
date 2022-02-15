@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
+  mode: 'development',
+  entry: {
+    index: './src/index.js',
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -14,6 +14,10 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],
