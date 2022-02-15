@@ -17,6 +17,33 @@ body {
   margin: 0;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  font-size: 1.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+
+header a {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding: 0 clamp(1rem, 2.5vw, 4rem);
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+
+header a:hover {
+  color: #EFDA2A;
+  background-color: rgba(0, 0, 0, 1);
+}
+
 .banner {
   color: white;
   background: url('./mind-blown.jpg') 50% 100% no-repeat;
@@ -24,8 +51,8 @@ body {
   height: calc(100vh);
   background-size: auto 115%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   align-items: center;
   justify-content: center;
 }
@@ -49,25 +76,28 @@ footer {
   font-size: 1rem;
   position: fixed;
   bottom: 0;
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   text-shadow: 0 0 1rem black;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
+footer p:first-child {
+  padding-left: 3vw;
+}
+
+footer p:last-child {
+  padding-right: 3vw;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 5.5rem;
+    line-height: 5.5rem;
   }
 
   h1 span {
