@@ -1,2 +1,4 @@
 import './style.css';
-import BannerImage from './mind-blown.jpg';
+import home from './home.js';
+
+home();
