@@ -1,51 +1,36 @@
-const buildHeader = () => {
-  const header = document.createElement('header'),
-        linkText = ['Home', 'Coffee', 'Contact'];
-
-  for (var i = 0; i < 3; i++) {
-    let link = document.createElement('a');
-    link.textContent = linkText[i];
-    header.appendChild(link);
-  }
-  return header;
-}
+import buildHeader from './header.js';
+import buildFooter from './footer.js';
 
 const buildHeading = () => {
   const heading = document.createElement('h1'),
         span = document.createElement('span'),
         linebreak = document.createElement("br");;
-  heading.innerText = 'MIND BLOWN';
-  span.innerText = 'Coffee Roasters';
+  heading.textContent = 'MIND BLOWN';
+  span.textContent = 'Coffee Roasters';
   heading.appendChild(linebreak);
   heading.appendChild(span);
   return heading;
 }
 
-const buildFooter = () => {
-  const footer = document.createElement('footer'),
-        author = document.createElement('p'),
-        github = document.createElement('a'),
+const buildHomeFooter = () => {
+  const footer = buildFooter(),
         attribution = document.createElement('p'),
         imgAuthor = document.createElement('a'),
         span = document.createElement('span'),
         behance = document.createElement('a');
 
-  author.innerHTML = '&copy;  ';
-  github.setAttribute('href', 'https://github.com/gregolive');
-  github.innerHTML = 'gregolive';
-  author.appendChild(github);
-  footer.appendChild(author);
-
   attribution.textContent = 'Photo by ';
   imgAuthor.setAttribute('href', 'https://www.behance.net/Pm_ghst1992');
-  imgAuthor.innerHTML = 'Pedro Moreno A. França';
+  imgAuthor.textContent = 'Pedro Moreno A. França';
   span.textContent = ' on ';
   behance.setAttribute('href', 'https://www.behance.net/');
-  behance.innerHTML = 'Behance';
+  behance.textContent = 'Behance';
+
   attribution.appendChild(imgAuthor);
   attribution.appendChild(span);
   attribution.appendChild(behance);
   footer.appendChild(attribution);
+
   return footer;
 }
 
@@ -55,7 +40,7 @@ const loadHome = () => {
   banner.className = 'banner';
   banner.appendChild(buildHeader());
   banner.appendChild(buildHeading());
-  banner.appendChild(buildFooter());
+  banner.appendChild(buildHomeFooter());
   content.appendChild(banner);
 };
 
