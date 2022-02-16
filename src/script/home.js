@@ -30,11 +30,12 @@ const buildHomeFooter = () => {
   attribution.appendChild(span);
   attribution.appendChild(behance);
   footer.appendChild(attribution);
+  footer.className = 'home-footer';
 
   return footer;
 }
 
-const loadHome = () => {
+const home = () => {
   const content = document.querySelector('.content'),
         banner = document.createElement('div');
   banner.className = 'banner';
@@ -44,4 +45,4 @@ const loadHome = () => {
   content.appendChild(banner);
 };
 
-export default loadHome;
+export default home;

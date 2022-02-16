@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Panic';
-  src: url('./Panic.ttf') format('truetype');
+  src: url('../fonts/Panic.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'RobotoSerif';
-  src: url('./RobotoSerif.ttf') format('truetype');
+  src: url('../fonts/RobotoSerif.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
@@ -47,7 +47,7 @@ header a:hover {
 
 .banner {
   color: white;
-  background: url('./mind-blown.jpg') 50% 100% no-repeat;
+  background: url('../img/mind-blown.jpg') 50% 100% no-repeat;
   width: 100vw;
   height: calc(100vh);
   background-size: auto 115%;
@@ -79,8 +79,12 @@ footer {
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   text-shadow: 0 0 0.4rem black;
+}
+
+footer.home-footer {
+  justify-content: space-between;
 }
 
 footer a:hover {
