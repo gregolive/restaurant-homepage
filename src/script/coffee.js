@@ -54,6 +54,7 @@ const buildCoffeeSection = () => {
   const section = document.createElement('section'),
         heading = document.createElement('h1');
 
+  section.className = 'coffee-section';
   heading.textContent = 'OUR ROASTS';
   section.appendChild(heading);
   section.appendChild(buildCoffeeGrid());
