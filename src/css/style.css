@@ -89,12 +89,8 @@ footer {
   font-size: 1rem;
   width: 100%;
   display: flex;
-  justify-content: center;
-  text-shadow: 0 0 0.4rem black;
-}
-
-footer.home-footer {
   justify-content: space-between;
+  text-shadow: 0 0 0.4rem black;
 }
 
 footer a:hover {
