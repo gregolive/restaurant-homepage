@@ -14,27 +14,27 @@ import contact from './contact.js';
 
   homeBtn.addEventListener('click', (e) => {
     resetPage();
-    assignActiveTab(e);
     home();
+    assignActiveTab(e);
   })
 
   coffeeBtn.addEventListener('click', (e) => {
     resetPage();
-    assignActiveTab(e);
     coffee();
+    assignActiveTab(e);
   })
 
   contactBtn.addEventListener('click', (e) => {
     resetPage();
-    assignActiveTab(e);
     contact();
+    assignActiveTab(e);
   })
 
   function resetPage() {
-    const content = document.querySelector('.content'),
+    const banner = document.querySelector('.banner'),
           buttons = document.querySelectorAll('.btn');
     
-    content.textContent = '';
+    banner.remove();
     
     buttons.forEach(button => {
       button.className = "";
