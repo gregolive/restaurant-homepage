@@ -8,7 +8,7 @@ const buildHeader = () => {
 
   linkText.forEach(link =>{
     let headerLink = document.createElement('a');
-    headerLink.textContent = link.text;
+    headerLink.innerHTML = link.text;
     headerLink.className = link.class;
     header.appendChild(headerLink);
   });

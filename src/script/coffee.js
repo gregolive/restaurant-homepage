@@ -1,6 +1,3 @@
-import buildHeader from './header.js';
-import buildFooter from './footer.js';
-
 import Ethiopia from '../img/Ethiopia.jpg';
 import Kenya from '../img/Kenya.jpg';
 import Colombia from '../img/Colombia.jpg';
@@ -54,7 +51,7 @@ const buildCoffeeSection = () => {
   const section = document.createElement('section'),
         heading = document.createElement('h1');
 
-  section.className = 'coffee-section';
+  section.className = 'page-section coffee-section';
   heading.textContent = 'OUR ROASTS';
   section.appendChild(heading);
   section.appendChild(buildCoffeeGrid());
@@ -63,14 +60,11 @@ const buildCoffeeSection = () => {
 }
 
 const coffee = () => {
-  const content = document.querySelector('.content'),
-        main = document.createElement('main');
+  const banner = document.querySelector('.banner'),
+        footer = document.querySelector('footer');
 
-  main.className = 'banner repeat';
-  main.appendChild(buildHeader());
-  main.appendChild(buildCoffeeSection());
-  main.appendChild(buildFooter());
-  content.appendChild(main);
+  banner.className = 'banner repeat';
+  banner.insertBefore(buildCoffeeSection(), footer);
 }
 
 export default coffee;

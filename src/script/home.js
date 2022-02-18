@@ -1,8 +1,9 @@
 import buildHeader from './header.js';
 import buildFooter from './footer.js';
 
-const buildHeading = () => {
-  const heading = document.createElement('h1'),
+const buildSection = () => {
+  const section = document.createElement('section'),
+        heading = document.createElement('h1'),
         span = document.createElement('span'),
         linebreak = document.createElement("br");
 
@@ -10,19 +11,28 @@ const buildHeading = () => {
   span.textContent = 'Coffee Roasters';
   heading.appendChild(linebreak);
   heading.appendChild(span);
+  section.appendChild(heading);
 
-  return heading;
+  return section;
 }
 
 const home = () => {
-  const content = document.querySelector('.content'),
-        banner = document.createElement('div');
+  if (!document.querySelector('header')) {
+    const content = document.querySelector('.content'),
+          banner = document.createElement('div');
 
-  banner.className = 'banner';
-  banner.appendChild(buildHeader());
-  banner.appendChild(buildHeading());
-  banner.appendChild(buildFooter());
-  content.appendChild(banner);
+    banner.className = 'banner';
+    banner.appendChild(buildHeader());
+    banner.appendChild(buildSection());
+    banner.appendChild(buildFooter());
+    content.appendChild(banner);
+  } else {
+    const banner = document.querySelector('.banner'),
+          footer = document.querySelector('footer');
+
+    banner.className = 'banner';
+    banner.insertBefore(buildSection(), footer);
+  }
 };
 
 export default home;

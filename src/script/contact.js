@@ -1,6 +1,3 @@
-import buildHeader from './header.js';
-import buildFooter from './footer.js';
-
 const buildContactInfo = () => {
   const section = document.createElement('section'),
         heading = document.createElement('h1'),
@@ -8,7 +5,7 @@ const buildContactInfo = () => {
         phone = document.createElement('p'),
         email = document.createElement('p');
 
-  section.className = 'contact-section'
+  section.className = 'page-section contact-section'
   heading.textContent = 'GET IN TOUCH';
   blurb.textContent = 'Hey there! We would love to hear from you. Please give us a call or send us an email.'
   phone.textContent = 'Phone: 01-2345-6789';
@@ -23,14 +20,11 @@ const buildContactInfo = () => {
 }
 
 const contact = () => {
-  const content = document.querySelector('.content'),
-        banner = document.createElement('div');
+  const banner = document.querySelector('.banner'),
+        footer = document.querySelector('footer');
 
   banner.className = 'banner';
-  banner.appendChild(buildHeader());
-  banner.appendChild(buildContactInfo());
-  banner.appendChild(buildFooter());
-  content.appendChild(banner);
+  banner.insertBefore(buildContactInfo(), footer);
 };
 
 export default contact;
