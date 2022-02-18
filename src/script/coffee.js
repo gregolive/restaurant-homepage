@@ -45,7 +45,7 @@ const buildCoffeeGrid = () => {
     gridItem.appendChild(img);
 
     coffeeGrid.appendChild(gridItem);
-  })
+  });
 
   return coffeeGrid;
 }

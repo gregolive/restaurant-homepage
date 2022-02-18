@@ -1,12 +1,18 @@
 const buildHeader = () => {
   const header = document.createElement('header'),
-        linkText = ['Home', 'Coffee', 'Contact'];
+        linkText = [
+          { text: 'Home', class: 'btn home-btn' },
+          { text: 'Coffee', class: 'btn coffee-btn' },
+          { text: 'Contact', class: 'btn contact-btn' }
+        ];
 
-  for (var i = 0; i < linkText.length; i++) {
-    let link = document.createElement('a');
-    link.textContent = linkText[i];
-    header.appendChild(link);
-  }
+  linkText.forEach(link =>{
+    let headerLink = document.createElement('a');
+    headerLink.textContent = link.text;
+    headerLink.className = link.class;
+    header.appendChild(headerLink);
+  });
+
   return header;
 }
 

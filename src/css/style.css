@@ -52,7 +52,7 @@ header a {
   transition: all 0.25s ease-in-out;
 }
 
-header a:hover {
+header a:hover, header a.active-btn {
   color: #EFDA2A;
   background-color: rgba(0, 0, 0, 1);
 }
@@ -147,6 +147,7 @@ a.grid-item h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0.5em 0 0.3rem 0;
+  text-align: center;
 }
 
 a.grid-item p {
