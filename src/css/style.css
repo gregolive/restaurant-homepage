@@ -225,7 +225,6 @@ section.contact-section p {
   section.contact-section p {
     font-size: 1.25rem;
   }
-  
 }
 
 @media screen and (max-width: 480px) {
@@ -243,5 +242,9 @@ section.contact-section p {
 
   section.contact-section p {
     font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.6rem;
   }
 }
