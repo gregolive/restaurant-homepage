@@ -17,11 +17,13 @@ const buildSection = () => {
 }
 
 const home = () => {
-  if (!document.querySelector('header')) {
-    const content = document.querySelector('.content'),
+  if (!document.querySelector('.content')) {
+    const content = document.createElement('div'),
           banner = document.createElement('div');
 
+    content.className = 'content';
     banner.className = 'banner';
+    document.body.appendChild(content);
     banner.appendChild(buildHeader());
     banner.appendChild(buildSection());
     banner.appendChild(buildFooter());
