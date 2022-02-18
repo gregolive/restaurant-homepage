@@ -6,10 +6,8 @@ import contact from './contact.js';
 home();
 
 const homeBtn = document.querySelector('.home-btn'),
-coffeeBtn = document.querySelector('.coffee-btn'),
-contactBtn = document.querySelector('.contact-btn');
-//activeBtn = document.querySelector('.active-btn');
-
+      coffeeBtn = document.querySelector('.coffee-btn'),
+      contactBtn = document.querySelector('.contact-btn');
 
 homeBtn.addEventListener('click', () => {
   resetPage();
